@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	    <title></title>
+	    <link rel="stylesheet" type="text/css" href="__BCSS__/reset.css" media="screen" />
+	    <link rel="stylesheet" type="text/css" href="__BCSS__/text.css" media="screen" />
+	    <link rel="stylesheet" type="text/css" href="__BCSS__/grid.css" media="screen" />
+	    <link rel="stylesheet" type="text/css" href="__BCSS__/layout.css" media="screen" />
+	    <link rel="stylesheet" type="text/css" href="__BCSS__/nav.css" media="screen" />
+	    <link rel="stylesheet" type="text/css" href="__BCSS__/jquery-ui.css" media="screen" />
+	    <link rel="stylesheet" type="text/css" href="__DCSS__/public.css" />
+	    <script type="text/javascript" src="__DJS__/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="__DJS__/public.js"></script>
+	</head>
+
+	<body>
+		<!-- -  单元信息显示 begin - -->
+		<div id="cellboardInfo" class="box round first" style="margin-top: 5px;">
+		    <h2 id="infoTitle" style="height: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看楼层</h2>
+		    <div id="infoBody" class="block">
+				<table class="table">
+					<tr>
+						<th>FID</th>
+						<th>楼层名称</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+					<volist name="category" id="n">
+						<tr>	
+							<td>{$n.fid}</td>
+							<td><a href="{:U('edit', array('fid'=>$n['fid']))}">{$n.fname}</a></td>
+							<if condition="$n.isoff eq 0">
+								<td>开启</td>
+							<else/>
+								<td>关闭</td>
+							</if>
+							<td>
+								<if condition="$n.isoff eq 0">
+									<a href="{:U('isoff', array('fid'=>$n['fid'], 'w'=>1))}">[关闭]</a>
+								<else/>
+									<a href="{:U('isoff', array('fid'=>$n['fid']))}">[开启]</a>
+								</if>
+								<a href="{:U('edit', array('fid'=>$n['fid']))}">[编辑]</a>
+								<a href="{:U('del' , array('fid'=>$n['fid']))}" class="del">[删除]</a>
+							</td>	
+						</tr>
+					</volist>
+				</table>
+				<div class="page">
+					{$page}
+				</div>
+		    </div>
+		</div>
+		<!-- -  单元信息显示 end - -->
+	</body>
+
+</html>
