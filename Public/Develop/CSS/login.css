@@ -1,0 +1,116 @@
+/*登录页css样式*/
+
+
+html,body{
+	text-align:center;
+	margin: 0px;
+	padding: 0px;
+	background-color: #2E5E79;
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+}
+
+.div{
+	margin:0 auto; 
+} 
+
+.clear{
+	width: 100%;
+	height: 50px;
+}
+
+.box{
+	width:900px;  
+	height:600px;
+	margin-bottom: 50px;
+	border-radius: 12px ;
+	border: 1px solid #B3CBD6;
+	background-color: #fff;
+}
+
+h2{
+	height: 50px;
+	margin-bottom: 12px; 
+	font-weight: bold;
+    color: #1B548D;
+	border-bottom: 2px solid #B3CBD6;
+}
+
+.form{
+	height: 500px;
+	font-family: "微软雅黑";
+}
+
+.inform{
+	float: left;
+	width: 560px;
+	height: 500px;
+	box-shadow: #000;
+	text-align:left;
+	padding: 0px 10px 0px 20px;
+	border-right: 2px solid #B3CBD6
+}
+
+.login{
+	float: right;
+	width: 280px;
+	height: 500px;
+	margin-right: 20px;
+	position: relative;
+}
+
+.input{
+	width: 200px;
+	height: 35px;
+	border-radius:3px;
+	font-size: 16px;
+	border-style: 1px solid #000;
+	/*background-color: #B3CBD6;*/
+}
+
+p{
+	height: 60px;
+}
+
+label{
+	font-weight: bold;
+    color: #1B548D;
+}
+
+.botton{
+	width: 250px;
+	height: 50px;
+	font-size: 20px;
+	color: white;
+	font-weight: bolder;
+	background-color: #0561b4;
+}
+
+.block{
+	width:280px;
+	margin-top: 60px;
+}
+
+img{
+	width: 90px; 
+	height: 38px;
+	float: right;
+	margin-right: 20px;
+}
+
+.input_1{
+	width: 90px;
+	float: left;
+	height: 35px;
+	border-radius:3px;
+	font-size: 16px;
+	border-style: 1px solid #000;
+}
+
+.little{
+	color: #0561b4;
+	font-weight: bold;
+}
